@@ -1,12 +1,15 @@
 package web.model;
 
-public class Car {
+import org.springframework.stereotype.Component;
 
+@Component
+public class Car {
     private int id;
     private String model;
     private int series;
 
-    public Car(){}
+    public Car() {
+    }
 
     public Car(int id, String model, int series) {
         this.id = id;
