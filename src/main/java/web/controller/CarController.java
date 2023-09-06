@@ -25,8 +25,7 @@ public class CarController {
     public String carCount(
             @RequestParam(name = "count", defaultValue = "5") int count, Model model
     ) {
-        List<Car> listCar;
-        listCar = carService.addCar();
+        List<Car> listCar = carService.addCar();
         listCar = carService.getCarByCount(listCar, count);
         model.addAttribute("listCar", listCar);
         return "cars";

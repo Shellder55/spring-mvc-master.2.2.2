@@ -26,7 +26,7 @@ public class CarDaoImpl implements CarDao {
 
     @Override
     public List<Car> getCarByCount(List<Car> list, int count) {
-        if (count > 5) {
+        if (count >= 5) {
             return new ArrayList<>(list);
         } else if (count < 0) {
             return list.stream().limit(0).collect(Collectors.toList());
